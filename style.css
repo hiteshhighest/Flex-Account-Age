@@ -18,6 +18,21 @@ body {
     justify-content: center;
 }
 
+@keyframes popup {
+    0% {
+        opacity: 0;
+        scale: 0.2;
+    }
+    27% {
+        opacity: 1;
+        scale: 1;
+    }
+    100% {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
 .main {
     display: flex;
     flex-direction: column;
@@ -78,6 +93,8 @@ a {
     width: 100%;
     margin-top: 75px;
     color: #fff;
+    animation: popup linear;
+    animation-timeline: view();
 }
 
 .about {
@@ -96,6 +113,8 @@ a {
     border-radius: 25px;
     padding: 40px 0px;
     box-shadow: 0px 10px 19px #000;
+    animation: popup linear;
+    animation-timeline: view();
 }
 
 @media (max-width: 500px) {
@@ -126,6 +145,8 @@ a {
     border-radius: 25px;
     padding: 40px 0px;
     box-shadow: 0px 10px 19px #000;
+    animation: popup linear;
+    animation-timeline: view();
 }
 
 .badge-1,
@@ -186,6 +207,8 @@ a {
     border-radius: 25px;
     padding: 40px 0px;
     box-shadow: 0px 10px 19px #000;
+    animation: popup linear;
+    animation-timeline: view();
 }
 
 .pass-img {

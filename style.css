@@ -6,7 +6,7 @@
 
 body {
     height: 100%;
-    background: linear-gradient(45deg, #af01ff, #0077ff);
+    background: linear-gradient(45deg, #fff, #00f);
     overflow-x: hidden;
 }
 
@@ -37,6 +37,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 .logo {
@@ -46,10 +47,16 @@ body {
     box-shadow: 0px 10px 19px rgba(0,0,0,0.9);
 }
 
+@media (max-width: 700px) {
+    .logo {
+        height: 75%;
+    }
+}
+
 .Game-Title {
     font-weight: bolder;
     font-size: 50px;
-    font-family: "Merriweather", serif;
+    font-family: Arial, Helvetica, sans-serif, serif;
     margin-top: 40px;
 }
 
@@ -70,7 +77,6 @@ a {
     border: none;
     margin-top: 20px;
     cursor: pointer;
-    box-shadow: 0px 10px 19px rgba(0,0,0,0.9);
     transition: all 0.3s;
 }
 
@@ -117,7 +123,7 @@ a {
     animation-timeline: view();
 }
 
-@media (max-width: 500px) {
+@media (max-width: 700px) {
     .thumbnail {
         flex-direction: column;
         row-gap: 40px;
@@ -147,6 +153,17 @@ a {
     box-shadow: 0px 10px 19px #000;
     animation: popup linear;
     animation-timeline: view();
+}
+
+@media (max-width: 700px) {
+    .badges {
+        flex-direction: column;
+        row-gap: 40px;
+    }
+    .badge-2 {
+        border-top: 2px solid black;
+        padding-top: 30px;
+    }
 }
 
 .badge-1,
@@ -211,6 +228,13 @@ a {
     animation-timeline: view();
 }
 
+@media (max-width: 700px) {
+    .passes {
+        flex-direction: column;
+        row-gap: 40px;
+    }
+}
+
 .pass-img {
     border-radius: 50%;
     height: 250px;
@@ -220,4 +244,9 @@ a {
     margin-top: 75px;
     height: 95px;
     width: 270px;
+    background-color: #000;
+    color: #fff;
+    margin-bottom: 70px;
+    animation: popup linear;
+    animation-timeline: view();
 }
